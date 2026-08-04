@@ -45,7 +45,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("/send-email", {
+      const response = await fetch("https://portfolio-website-fs1h.onrender.com/send-email", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
