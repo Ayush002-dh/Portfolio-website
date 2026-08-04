@@ -25,12 +25,13 @@ app.post("/send-email", async (req, res) => {
     secure: false,
     auth: {
         user: process.env.EMAIL,
-        pass: process.env.APP_PASSWORD,
-    },
-    tls: {
-        rejectUnauthorized: false
+        pass: process.env.APP_PASSWORD
     }
 });
+
+await transporter.verify();
+console.log("SMTP Connected Successfully");
+
 
 
         await transporter.sendMail({
