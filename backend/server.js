@@ -54,11 +54,13 @@ app.post("/send-email", async (req, res) => {
         res.json({ success: true });
 
     } catch (err) {
+    console.error("EMAIL ERROR:", err);
 
-        console.error(err);
-        res.status(500).json({ success: false });
-
-    }
+    res.status(500).json({
+        success: false,
+        error: err.message
+    });
+}
 
 });
 
