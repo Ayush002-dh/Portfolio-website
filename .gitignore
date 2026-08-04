@@ -1,0 +1,8 @@
+# Ignore backend dependencies
+backend/node_modules/
+
+# Ignore environment file
+backend/.env
+
+# Optional
+.DS_Store
