@@ -5,7 +5,7 @@ require("dotenv").config();
 
 const app = express();
 app.use(cors({
-    origin: "https://ayush002-dh.github.io/Portfolio-website/"
+    origin: "https://ayush002-dh.github.io"
 }));
 app.use(express.json());
 
