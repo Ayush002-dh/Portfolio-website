@@ -27,61 +27,20 @@ const form = document.getElementById("contactForm");
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const submitBtn = form.querySelector('input[type="submit"]');
-
-    submitBtn.value = "Sending...";
-    submitBtn.disabled = true;
-
-    Swal.fire({
-        title: "Sending...",
-        text: "Please wait",
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-
     const formData = new FormData(form);
 
-    try {
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: formData
-        });
+    const response = await fetch(form.action, {
+        method: "POST",
+        body: formData
+    });
 
-        if (response.ok) {
-
-            Swal.fire({
-                icon: "success",
-                title: "Message Sent Successfully!",
-                text: "Thank you for contacting me.",
-                confirmButtonColor: "#00EEFF"
-            });
-
-            form.reset();   // ✅ Input fields clear
-
-        } else {
-
-            Swal.fire({
-                icon: "error",
-                title: "Failed!",
-                text: "Message could not be sent."
-            });
-
-        }
-
-    } catch (error) {
-
+    if (response.ok) {
         Swal.fire({
-            icon: "error",
-            title: "Server Error",
-            text: "Please try again later."
+            icon: "success",
+            title: "Message Sent!",
+            text: "Thank you for contacting me."
         });
 
-    } finally {
-
-        submitBtn.value = "Send Message";
-        submitBtn.disabled = false;
-
+        form.reset();
     }
 });
