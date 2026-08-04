@@ -305,71 +305,29 @@ I am a MERN Stack Developer trainee with a strong foundation in HTML, CSS, JavaS
             </div> 
         </div>
         <div class="form1">
-
-    <form id="contactForm">
+    <form action="https://formsubmit.co/aayushdhiman9899@gmail.com" method="POST">
 
         <div class="input">
-
-            <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                placeholder="First Name"
-                required
-            >
-
-            <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                placeholder="Last Name"
-                required
-            >
-
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Phone"
-                required
-            >
-
-            <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                required
-            >
-
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="text" name="phone" placeholder="Phone" required>
+            <input type="text" name="subject" placeholder="Subject" required>
         </div>
 
         <div class="input1">
+            <input type="email" name="email" placeholder="Email" required>
 
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                required
-            >
+            <textarea name="message" placeholder="Message" required></textarea>
 
-            <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-                required
-            ></textarea>
+            <input type="hidden" name="_captcha" value="false">
 
-            <input
-                type="submit"
-                value="Send Message"
-            >
+            <input type="hidden" name="_next"
+                value="https://ayush002-dh.github.io/Portfolio-website/">
 
+            <input type="submit" value="Send Message">
         </div>
 
     </form>
-
 </div>
       </div>
   </div>
