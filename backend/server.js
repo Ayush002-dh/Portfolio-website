@@ -4,9 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-app.use(cors({
-    origin: "https://ayush002-dh.github.io"
-}));
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
