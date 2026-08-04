@@ -29,18 +29,35 @@ form.addEventListener("submit", async (e) => {
 
     const formData = new FormData(form);
 
-    const response = await fetch(form.action, {
-        method: "POST",
-        body: formData
-    });
-
-    if (response.ok) {
-        Swal.fire({
-            icon: "success",
-            title: "Message Sent!",
-            text: "Thank you for contacting me."
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: formData
         });
 
-        form.reset();
+        const result = await response.json();
+
+        if (result.success === "true") {
+            Swal.fire({
+                icon: "success",
+                title: "Message Sent!",
+                text: "Thank you for contacting me."
+            });
+
+            form.reset();
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Failed!",
+                text: "Message not sent."
+            });
+        }
+
+    } catch (err) {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: err.message
+        });
     }
 });

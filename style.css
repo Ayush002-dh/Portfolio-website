@@ -161,7 +161,7 @@ text-align: center;
     width: 100%;
     min-height: 100vh;
     height: auto;
-    padding-top: 60px;
+    padding-top: 30px;
     padding-bottom: 60px;
 }
 .section1 h1{
@@ -914,23 +914,26 @@ p{
 
     .d2 a{
         font-size:14px;
+        text-align: justify;
     }
 
     .m1 h1{
-        font-size:34px;
-    }
-
-    .m1 h3{
         font-size:22px;
     }
 
+    .m1 h3{
+        font-size:20px;
+    }
+
     .m1 p{
-        font-size:15px;
+        font-size:13px;
+        text-align:justify;
     }
 
     .m2 img{
         width:200px;
         height:200px;
+
     }
 
     .icon{
@@ -952,7 +955,8 @@ p{
     }
 
     .section1 h1{
-        font-size:32px;
+        font-size:30px;
+        padding-bottom: 30px;
     }
 
     .left{
@@ -967,28 +971,81 @@ p{
 
     .tab-buttons{
         gap: 12px;
+        text-align: justify;
+
+
     }
 
     .tab-btn{
         font-size: 15px;
-    }
+        text-align:start;
 
+    }
+    .tab-content h2{
+        text-align: start;
+    }
+.tab-content p{
+    text-align: start;
+}
     .service-box{
         padding: 25px 18px;
     }
-
+    .service-box h2{
+        font-size: 20px;
+    }
     .service-box i{
         font-size: 45px;
     }
+    .service-box p{
+        font-size:14px;
+    }
+    .project-container{
+        height: 100%;
+    }
+    .project h1{
+        font-size: 26px;
+    }
 
     .card{
-        max-width: 100%;
+        width: 360px;
+        
     }
 
     .card img{
-        height: 180px;
+        height: 140px;
     }
+    .div1 h1{
+        font-size: 26px;
+    }
+    .skill{
+        /*  */
+        font-size: 30px;
+    
+    }
+    .skill img{
+        width: 50px;
+        height: 50px;
+    }
+    .skill-title h3{
+        font-size: 16px;
+        font-style: none;
+    }
+    .progress{
+        height: 7px;
 
+    }
+    .Services{
+
+    }
+    .h1{
+      font-size:26x;
+
+    }
+    .about-content p{
+        font-size: 12px;
+        text-align: justify;
+    }
+    
 }
 
 
